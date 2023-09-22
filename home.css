@@ -1,0 +1,278 @@
+body {
+    background-color: #fffcc2;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+}
+
+h1{
+    font-size: 500%;
+}
+
+
+
+
+.head {
+    display: flexbox;
+}
+
+header {
+    display: flexbox;
+    padding-top: 0;
+    font-family: cursive;
+    text-align: center;
+    color: #000000;
+    min-height: 12rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    margin: 0%;
+    background-color: rgb(255, 216, 157);
+}
+
+.nav-bar{
+    padding: 1.1rem;
+    text-align: center;
+    background-color: #ffcb3c;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 700;
+    padding: 1rem;
+    border-left: 1rem;
+    border-right: 1rem;
+    font-size: large;
+}
+
+.nav-bar a:hover {
+    background-color: #fffcc2;
+    scale: 1.15;
+}
+
+
+
+
+
+.intro{
+    background-image: url('https://images.pexels.com/photos/1861785/pexels-photo-1861785.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-clip: border-box;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 80rex;
+    display: flex;
+    overflow: hidden;
+}
+
+
+
+
+
+
+.us {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 10%;
+    align-self: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 80%;
+}
+
+.us .us-content{
+    border-top: 5rem;
+    text-align: center;
+    max-width: 80%;
+}
+
+.us .us-content h1{
+    display: flex;
+    position: relative;
+    font-size: 300%;
+    font-weight: 900;
+}
+
+.us .us-content p{
+    text-align: left;
+    font-size: larger;
+}
+
+.us .us-image{
+    overflow: hidden;
+    position:static;
+    max-width: 100%;
+    min-height: 30rem;
+    display:flex;
+    background-image: url('https://cdn.pixabay.com/photo/2020/03/15/23/24/food-4935258_1280.jpg');
+    background-position: left;
+    background-clip: padding-box;
+    background-size: cover;
+}
+
+
+
+
+.Menus {
+    text-align: center;
+}
+
+
+
+.Menus .Cards{
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 25px
+}
+
+
+.Menus button{
+    position: absolute;
+    text-align: center;
+    display: flex;
+    background-color: #b38300;
+    color: #ffffff;
+    padding: 1.1rem;
+    font-size: larger;
+    border: none;
+    font-weight: 600;
+    border-radius: 1.5rem;
+    
+    transform: translateX(100%);
+}
+
+.Menus button:hover{
+    background-color: #ffda72;
+    color: #000000;
+    font-weight: 700;
+}
+
+.Menus .card{
+    position: relative;
+    padding: 1.2rem;
+    display: block;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+.Specials {
+    text-align: center;
+}
+
+
+
+
+.reservation {
+    text-align: center;
+}
+
+.reservation .reserve{
+    background-image: url("https://images.pexels.com/photos/4551835/pexels-photo-4551835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.reservation form{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: block;
+    background: #ffd9728e;
+}
+
+.reservation input{
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    min-width: 10%;
+}
+
+.reservation button{
+    font-size: large;
+    background-color: #b38300;
+    color: #ffffff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.reservation button:hover{
+    background-color: #fffcc2;
+    color: #000000;
+}
+
+.reservation h2{
+    color: #000000;
+}
+
+
+
+.footer{
+    padding-top: 2%;
+    max-width: 100%;
+    background-color: #b38300;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 10%;
+}
+
+.footer p{
+    padding-left: 5%;
+    font-size: large;
+}
+
+.footer span{
+    font-size: larger;
+    font-weight: 700;
+    color: #000000;
+}
+
+.footer .tele{
+    padding-top: 20px;
+}
+
+.footer .links{
+    align-content: center;
+}
+
+.footer .links ul{
+    padding: 20px;
+    list-style-type: none;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.footer .links li{
+    padding: 10px;
+}
+
+.footer .links a{
+    text-decoration: none;
+    font-size: larger;
+    font-weight: 700;
+    color: #000000;
+}
+
+.footer .links li:hover{
+    scale: 1.05;
+}
+
+
+
+
+
+
+
+
+
+
+

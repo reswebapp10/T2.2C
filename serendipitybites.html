@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serendipity Bites</title>
+
+    <link rel="stylesheet" href="home.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div class="head">
+        <header>
+            <img src="logo.png" width="auto" height="225" alt="Logo">
+            <h2 class="tag">_Where Spice and Sunshine Unite_</h2>
+        </header>
+
+        <div class="nav-bar">
+            <a href="#">Today's Specials</a>
+            <a href="#">Reserve Now</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </div>
+
+    <section class="intro"></section>
+
+   <section class="us">
+    <div class="us-content">
+        <h1>Who are we...</h1>
+        <p>
+            Welcome to Serendipity Bites, your passport to the enchanting world of Sri Lankan cuisine within the heart of Australia. Our restaurant is a 
+            culinary haven where we invite you to embark on a delightful journey through the flavors and traditions of Sri Lanka.
+                <br><br>
+            Our dedicated chefs meticulously craft each dish, blending authentic Sri Lankan recipes with a touch of Australian warmth. From aromatic 
+            curries that tantalize your taste buds to fresh seafood that transports you to coastal markets, our menu is a testament to the rich and diverse 
+            tapestry of Sri Lankan gastronomy.
+        </p>    
+    </div>
+    <div class="us-image"> </div>
+   </section>
+
+
+   <section id="Menus" class="Menus">
+    <h1>Our Menu</h1>
+        <div class="Cards" v-for="item in menu">
+            <div class="card">
+                <img src="menu-3168414_640.jpg" width="300" height="auto" alt="menu"/>
+                <button class="order">Order Now</button>
+            </div>
+            <div class="card">
+                <img src="menu-3168414_640.jpg" width="300" height="auto" alt="menu"/>
+                <button class="order">Order Now</button>
+            </div>
+            <div class="card">
+                <img src="menu-3168414_640.jpg" width="300" height="auto" alt="menu"/>
+                <button class="order">Order Now</button>
+            </div>
+        </div>
+   </section>
+
+
+   <section id="Specials" class="Specials">
+    <h1>Today's Specials</h1>
+    <div>
+            <img v-if="special != null" src="special" alt="">
+            <h2 v-else> Sorry we don't have specials today. Stay tuned with Us</h2>
+    </div>
+   </section>
+   
+   
+
+   <section id="reservation" class="reservation">
+    <h1>Make your Reservation</h1>
+    <div class="reserve">
+        <form>
+            <h2>Name</h2>
+            <input v-model="reservationContact" type="text" placeholder="Your Name">
+    
+            <h2>Email</h2>
+            <input type="email" placeholder="Email">
+    
+            <h2>Contact Number</h2>
+            <input v-model="reservationContact" type="tel" placeholder="Mobile Number">
+            <br><br>
+            <button class="reserved" @click='addreservation' >Add Reservation</button>
+        </form>
+
+    </div>
+   </section>
+
+
+   <section class="footer">
+    <div class="contact">
+        <img src="logo.png" alt="logo" width="auto" height="150">
+        <p><span>Serendipity Bites</span> <br>Melbourne, Australia</p>
+    </div>
+    <div class="tele">
+        <p><span>Contact Us</span> +61 5564 4564564</p>
+        <p><span>Email</span> info@serendipitybites.com</p>
+        <h2>Where Spice and Sunshine Unite</h2>
+    </div>
+    <div class="links">
+        <ul>
+            <li><a href="#">Today's Specials</a></li>
+            <li><a href="#">Reserve Now</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul> 
+    </div>
+   </section>
+
+
+   <script>
+    vue.createApp({
+        data() {
+            return{
+                menu: [
+                   {type: 'pizza', link: 'https://pixabay.com/get/g83c703aacf412b8f28b3f84aa588e4c058042d0dd2b35974d7f8e73278ce4c5b8f562e99f7c48960448099c5713d886c2075fac83e132acb13b8af103cc8e5443e04e1aedbd6f50905482acaafd0dd79_640.jpg'},
+                   {type: 'pizza', link: 'https://pixabay.com/get/g83c703aacf412b8f28b3f84aa588e4c058042d0dd2b35974d7f8e73278ce4c5b8f562e99f7c48960448099c5713d886c2075fac83e132acb13b8af103cc8e5443e04e1aedbd6f50905482acaafd0dd79_640.jpg'},
+                ]
+            };
+        }
+    }).mount('#Menus');
+
+
+
+    vue.createApp({
+        data() {
+            return {
+                reservationContact: '',
+            }
+        },
+        methods: {
+            addreservation() {
+                alert(`Thank you, ${this.reservationName}! Your table has been reserved.`);
+            }
+        },
+    }).mount("#reservation")
+
+
+    vue.createApp({
+        data() {
+            return{
+                special: "https://pixabay.com/get/g83c703aacf412b8f28b3f84aa588e4c058042d0dd2b35974d7f8e73278ce4c5b8f562e99f7c48960448099c5713d886c2075fac83e132acb13b8af103cc8e5443e04e1aedbd6f50905482acaafd0dd79_640.jpg"
+            }
+        },
+    }).mount("#Specials")
+   </script>
+</body>
+</html>
